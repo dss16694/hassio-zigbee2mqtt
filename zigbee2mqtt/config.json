@@ -1,5 +1,5 @@
 {
-  "name": "zigbee2mqtt",
+  "name": "zigbee2mqttsx",
   "version": "1.14.1",
   "slug": "zigbee2mqtt",
   "description": "Zigbee to MQTT Bridge",
@@ -143,5 +143,5 @@
       "log": "bool?"
     }
   },
-  "image": "dwelch2101/zigbee2mqtt-{arch}"
+  "image": "dss16694/zigbee2mqtt-{arch}"
 }
