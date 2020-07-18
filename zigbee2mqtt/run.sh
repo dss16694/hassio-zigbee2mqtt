@@ -36,6 +36,16 @@ if [[ ! -z "$ZIGBEE_SHEPHERD_DEVICES" ]]; then
     else
         echo "[Error] File $DATA_PATH/devices.js not found! Starting with default devices.js"
     fi
+    if [[ -f "$DATA_PATH"/fromZigbee.js ]]; then
+        cp -f "$DATA_PATH"/fromZigbee.js ./node_modules/zigbee-herdsman-converters/converters/fromZigbee.js
+    else
+        echo "[Error] File $DATA_PATH/fromZigbee.js not found! Starting with default fromZigbee.js"
+    fi
+    if [[ -f "$DATA_PATH"/toZigbee.js ]]; then
+        cp -f "$DATA_PATH"/toZigbee.js ./node_modules/zigbee-herdsman-converters/converters/toZigbee.js
+    else
+        echo "[Error] File $DATA_PATH/toZigbee.js not found! Starting with default toZigbee.js"
+    fi
 fi
 
 # FORK SOCAT IN A SEPARATE PROCESS IF ENABLED
